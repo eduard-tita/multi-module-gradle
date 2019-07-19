@@ -27,6 +27,9 @@ dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:27.1-jre'
 
+    // https://mvnrepository.com/artifact/org.apache.struts/struts2-core
+    compile group: 'org.apache.struts', name: 'struts2-core', version: '2.5'
+
     // Use the latest Groovy version for Spock testing
     testImplementation 'org.codehaus.groovy:groovy-all:2.5.6'
 
