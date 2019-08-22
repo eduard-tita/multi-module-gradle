@@ -35,7 +35,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
-/*application {
+application {
     // Define the main class for the application
     mainClassName = 'multi.project.gradle.App'
-}*/
+}
