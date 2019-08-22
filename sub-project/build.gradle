@@ -29,6 +29,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.apache.struts/struts2-core
     compile group: 'org.apache.struts', name: 'struts2-core', version: '2.5'
+    
+    // vulnerable
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.0'
 
     // Use the latest Groovy version for Spock testing
     testImplementation 'org.codehaus.groovy:groovy-all:2.5.6'
