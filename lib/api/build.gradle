@@ -12,12 +12,8 @@ plugins {
 
     // Apply the groovy plugin to also add support for Groovy (needed for Spock)
     id 'groovy'
-}
 
-repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    id 'org.sonatype.gradle.plugins.scan' version '4.0.0'
 }
 
 dependencies {
@@ -27,4 +23,11 @@ dependencies {
     implementation 'com.google.guava:guava:27.1-jre'
 
     testImplementation 'junit:junit:4.12'
+}
+
+nexusIQScan {
+    username = 'admin'
+    password = 'qzBt29pMc7'
+    serverUrl = 'http://localhost:8070'
+    applicationId = 'et-app'
 }

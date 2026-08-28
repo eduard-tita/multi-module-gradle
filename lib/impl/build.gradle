@@ -12,18 +12,21 @@ plugins {
 
     // Apply the groovy plugin to also add support for Groovy (needed for Spock)
     id 'groovy'
-}
 
-repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
+    id 'org.sonatype.gradle.plugins.scan' version '4.0.0'
 }
 
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
-    implementation 'org.apache.struts:struts2-core:2.5.20'
-    implementation 'org.apache.logging.log4j:log4j-core:2.6.1'
+    implementation 'org.apache.struts:struts2-core:7.0.3'
+    implementation 'org.apache.logging.log4j:log4j-core:2.26.1'
 
     testImplementation 'junit:junit:4.12'
+}
+
+nexusIQScan {
+    username = 'admin'
+    password = 'qzBt29pMc7'
+    serverUrl = 'http://localhost:8070'
+    applicationId = 'et-app'
 }
